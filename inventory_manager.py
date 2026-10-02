@@ -1,16 +1,13 @@
 import os
+import json
 
 print("============================================================")
 print("INVENTORY MANAGEMENT SYSTEM")
 print("============================================================")
 
-# Check inventory.json file exists
-if not os.path.exists("inventory.json"):
-    print("Error: inventory.json file not found.")
-    exit(1)
-else:
-    print("inventory.json file found.")
-    print("Inventory loaded successfully.")
+INVENTORY_FILE = "inventory.json"
+
+
 
 
 print("----------------- MENU -----------------")
@@ -94,6 +91,29 @@ def get_valid_input():
             failed_attempts += 1
 
 
+def save_inventory(inventory):
+    with open(INVENTORY_FILE, "w") as file:
+        json.dump(inventory, file, indent=4)
+
+def load_inventory():
+    inventory = []
+    status = False
+
+    # Check inventory.json file exists
+    if not os.path.exists(INVENTORY_FILE):
+        print("Error: inventory.json file not found.")
+
+        save_inventory()
+
+    else:
+        print("inventory.json file found.")
+        print("Inventory loaded successfully.")
+
+        with open(INVENTORY_FILE, "r") as file:
+                inventory = json.load(file)
+                status = True
+
+                return inventory, status
 
 
 # Main Program
