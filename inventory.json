@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1004",
+        "name": "Keyboard",
+        "price": 120.0,
+        "stock": 10
+    },
+    {
+        "id": "1005",
+        "name": "Monitor",
+        "price": 300.0,
+        "stock": 5
+    },
+    {
+        "id": "1006",
+        "name": "Webcam",
+        "price": 80.0,
+        "stock": 15
+    },
+    {
+        "id": "1007",
+        "name": "Headset",
+        "price": 60.0,
+        "stock": 20
+    },
+    {
+        "id": "1008",
+        "name": "External Hard Drive",
+        "price": 150.0,
+        "stock": 8
+    },
+    {
+        "id": "1009",
+        "name": "Camera Lens",
+        "price": 150.0,
+        "stock": 20
+    }
+]
